@@ -5,7 +5,7 @@ var sourceCode = `
     var domain = 'http://bugs.cbeagan.org/browse/'
     var defaultPrefix = 'CB-'
     var tkt = window.prompt('Enter JIRA ticket number')
-    if (tkt.length === 4) { 
+    if (isFinite(parseFloat(tkt))) { 
         tkt = defaultPrefix + tkt
     }
     window.open(domain + tkt, 'jira') 
